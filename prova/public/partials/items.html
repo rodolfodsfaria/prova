@@ -1,0 +1,26 @@
+<br>
+<br>
+<br>
+<br>
+<p ng-show="mensagem.texto">{{mensagem.texto}}</p>
+
+<a ng-href="#/item" class="btn btn-primary">Add Item</a>
+
+<div class="table-responsive">
+    <br>
+    <table class="table table-hover">
+        <tr>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+
+            <th class="text-center">Action</th>
+        </tr>
+        <tr ng-repeat= "item in items | filter: filtro">
+            <td>{{item.description}}</a></td>
+            <td>{{item.qty}}</td>
+            <td>{{item.price}}</td>
+            <td class="text-center"> <button ng-click="remove(item)" class="btn btn-warning">Remove</button></td>
+        </tr>
+    </table>
+</div>
